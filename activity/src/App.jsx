@@ -1,11 +1,15 @@
 import React from "react";
-import Activities from "./components/Activities";
+import Sidebar from "./Sidebar";
+import Activities from "./Activities";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="app-container">
-      <Activities />
+      <Sidebar />
+      <div className="main-content">
+        <Activities />
+      </div>
     </div>
   );
 };
