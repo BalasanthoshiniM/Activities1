@@ -3,6 +3,7 @@ import "./Activities.css";
 
 function Activities() {
   return (
+    <center>
     <div className="activities-page">
       <h1 className="activities-heading">Activities</h1>
       <div className="activities-content">
@@ -14,6 +15,7 @@ function Activities() {
         </p>
       </div>
     </div>
+    </center>
   );
 }
 

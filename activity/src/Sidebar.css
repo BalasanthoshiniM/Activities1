@@ -1,35 +1,41 @@
 .sidebar {
-    width: 250px;
-    background: #ffffff;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo-container {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .nav-links li {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .nav-links li:hover {
-    background: #ddd;
-    border-radius: 5px;
-  }
-  
+  width: 250px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.college-name {
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  padding: 12px;
+  font-size: 18px; /* Adjusted font size */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  background: #ddd;
+  border-radius: 5px;
+}
