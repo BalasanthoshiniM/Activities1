@@ -16,7 +16,7 @@
   
   .table-wrapper {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
   }
   
   h3 {
@@ -39,5 +39,22 @@
   th {
     background: #f4f4f4;
     font-weight: bold;
+  }
+  
+  td.clickable {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  td.clickable:hover {
+    background: #f0f0f0;
+  }
+  
+  .project-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
   }
   
