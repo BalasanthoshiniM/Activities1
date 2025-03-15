@@ -1,0 +1,41 @@
+.hackathon-container {
+    flex-grow: 1;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hackathon-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hackathon-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.hackathon-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hackathon-image, .hackathon-video {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    max-height: 250px; /* Avoid oversized media */
+    object-fit: cover;
+}

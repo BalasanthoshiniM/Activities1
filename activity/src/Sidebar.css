@@ -16,10 +16,9 @@
 }
 
 .college-name {
-  font-size: 24px; /* Increased font size */
+  font-size: 22px; /* Increased font size */
   font-weight: bold;
-  margin-top: 10px;
-  color: #333;
+  text-align: center;
 }
 
 .nav-links {
@@ -29,13 +28,22 @@
 }
 
 .nav-links li {
-  padding: 12px;
-  font-size: 18px; /* Adjusted font size */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  color: black; /* Set text color to black */
 }
 
 .nav-links li:hover {
   background: #ddd;
   border-radius: 5px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit; /* Keeps original text color */
+  display: block;
+  padding: 10px;
 }
