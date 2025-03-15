@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Activities from "./Activities";
-import Hackathon from "./Hackathon"; // Import the Hackathon page
+import Hackathon from "./Hackathon";
+import Internship from "./Internship";
 import "./App.css";
 
 const App = () => {
@@ -12,9 +13,12 @@ const App = () => {
         <Sidebar />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Activities />} />
+            {/* Redirect / to /activities */}
+            <Route path="/" element={<Navigate to="/activities" />} />
+            <Route path="/activities" element={<Activities />} />
             <Route path="/hackathon" element={<Hackathon />} />
-            {/* Add routes for Internships and Projects later */}
+            <Route path="/internship" element={<Internship />} />
+            {/* Add routes for Projects later */}
           </Routes>
         </div>
       </div>

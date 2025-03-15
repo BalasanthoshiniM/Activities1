@@ -11,7 +11,7 @@ const Sidebar = () => {
         <h2 className="college-name">VCET</h2>
       </div>
       <ul className="nav-links">
-        <li><Link to="/internships" className="nav-item">Internships</Link></li>
+        <li><Link to="/internship" className="nav-item">Internships</Link></li>
         <li><Link to="/hackathon" className="nav-item">Hackathons</Link></li>
         <li><Link to="/projects" className="nav-item">Projects</Link></li>
       </ul>
