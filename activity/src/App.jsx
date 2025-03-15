@@ -5,6 +5,7 @@ import Activities from "./Activities";
 import Hackathon from "./Hackathon";
 import Internship from "./Internship";
 import "./App.css";
+import Projects from "./Projects";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/activities" element={<Activities />} />
             <Route path="/hackathon" element={<Hackathon />} />
             <Route path="/internship" element={<Internship />} />
+            <Route path="/projects" element={<Projects />} />
             {/* Add routes for Projects later */}
           </Routes>
         </div>

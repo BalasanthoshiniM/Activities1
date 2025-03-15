@@ -1,0 +1,43 @@
+.projects-container {
+    margin-left: 270px;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .tables-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .table-wrapper {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background: #f4f4f4;
+    font-weight: bold;
+  }
+  
