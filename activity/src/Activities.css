@@ -1,21 +1,39 @@
-.activities-container {
-  background: white;
+.activities-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  background: #f4f4f4;
+  height: 100vh;
+}
+
+.activities-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.activities-content {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-h1 {
-  color: #333;
-}
-
-.activity-list {
-  margin-top: 10px;
-}
-
-.activity-card {
-  background: #e3f2fd;
-  padding: 10px;
-  border-radius: 5px;
+.activities-title {
+  font-size: 24px;
+  color: #1e3a8a;
   margin-bottom: 10px;
+}
+
+.activities-description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
 }
