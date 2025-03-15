@@ -1,18 +1,20 @@
 import React from "react";
 import "./Activities.css";
 
-const Activities = () => {
+function Activities() {
   return (
-    <div className="activities-container">
-      <h1>Activities</h1>
-      <div className="activity-list">
-        <div className="activity-card">📌 Workshop on AI & ML</div>
-        <div className="activity-card">🚀 Hackathon: Code Sprint 2025</div>
-        <div className="activity-card">🔬 Research on IoT Applications</div>
-        <div className="activity-card">🏆 In-house Internship Projects</div>
+    <div className="activities-page">
+      <h1 className="activities-heading">Activities</h1>
+      <div className="activities-content">
+        <h2 className="activities-title">Welcome to the Activities Section</h2>
+        <p className="activities-description">
+          This page provides insights into various activities conducted by the college, including 
+          in-house internships, hackathons, and student projects. Explore different sections to 
+          learn more about ongoing and completed projects and the students working on them.
+        </p>
       </div>
     </div>
   );
-};
+}
 
 export default Activities;
