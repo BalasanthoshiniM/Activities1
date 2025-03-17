@@ -42,52 +42,47 @@ const Projects = () => {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
   return (
     <div className="projects-container">
       <h2>Projects</h2>
 
       <div className="projects-section">
+        {/* Ongoing Projects Section */}
         <div className="project-category">
           <h3>Ongoing Projects</h3>
-          <table className="project-table">
-            <thead>
-              <tr>
-                <th>Project Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ongoingProjects.map((project) => (
-                <tr key={project.id} onClick={() => handleProjectClick(project)}>
-                  <td>{project.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="project-grid">
+            {ongoingProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="project-card" 
+                onClick={() => setSelectedProject(project)}
+              >
+                <h4>{project.name}</h4>
+                <p><strong>Mentor:</strong> {project.mentor}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
+        {/* Completed Projects Section */}
         <div className="project-category">
           <h3>Completed Projects</h3>
-          <table className="project-table">
-            <thead>
-              <tr>
-                <th>Project Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              {completedProjects.map((project) => (
-                <tr key={project.id} onClick={() => handleProjectClick(project)}>
-                  <td>{project.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="project-grid">
+            {completedProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="project-card" 
+                onClick={() => setSelectedProject(project)}
+              >
+                <h4>{project.name}</h4>
+                <p><strong>Mentor:</strong> {project.mentor}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
+      {/* Project Details Modal */}
       {selectedProject && (
         <div className="project-details-card">
           <h3>{selectedProject.name}</h3>

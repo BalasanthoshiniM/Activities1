@@ -6,36 +6,66 @@
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .projects-section {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+}
+
+/* Project Category Styles */
+.project-category {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-category h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.project-table {
-  width: 100%;
-  border-collapse: collapse;
+/* Project Cards Grid */
+.project-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
   background: white;
-}
-
-.project-table th, .project-table td {
-  padding: 12px;
-  border: 1px solid #ddd;
-  text-align: left;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.project-table tr:hover {
-  background: #f0f0f0;
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #e3f2fd;
 }
 
+.project-card h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Project Details Modal */
 .project-details-card {
   position: fixed;
   top: 50%;
