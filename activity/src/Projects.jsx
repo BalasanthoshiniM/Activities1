@@ -80,19 +80,33 @@ const Projects = () => {
 
       {/* Ongoing Projects */}
       <div className="projects-section">
+        {/* Ongoing Projects Section */}
         <div className="project-category">
           <h3>Ongoing Projects</h3>
+<<<<<<< HEAD
           <div className="project-list">
             {ongoingProjects.map((project) => (
               <div key={project.id} className="project-card" onClick={() => setSelectedProject(project)}>
                 <h4>{project.name}</h4>
                 <p><strong>Mentor:</strong> {project.mentor}</p>
                 <p><strong>Team:</strong> {project.team.join(", ")}</p>
+=======
+          <div className="project-grid">
+            {ongoingProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="project-card" 
+                onClick={() => setSelectedProject(project)}
+              >
+                <h4>{project.name}</h4>
+                <p><strong>Mentor:</strong> {project.mentor}</p>
+>>>>>>> eeae61f3ca172fd347692b9ffb5a04972fb6e33d
               </div>
             ))}
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Completed Projects */}
         <div className="project-category">
           <h3>Completed Projects</h3>
@@ -102,13 +116,31 @@ const Projects = () => {
                 <h4>{project.name}</h4>
                 <p><strong>Mentor:</strong> {project.mentor}</p>
                 <p><strong>Team:</strong> {project.team.join(", ")}</p>
+=======
+        {/* Completed Projects Section */}
+        <div className="project-category">
+          <h3>Completed Projects</h3>
+          <div className="project-grid">
+            {completedProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="project-card" 
+                onClick={() => setSelectedProject(project)}
+              >
+                <h4>{project.name}</h4>
+                <p><strong>Mentor:</strong> {project.mentor}</p>
+>>>>>>> eeae61f3ca172fd347692b9ffb5a04972fb6e33d
               </div>
             ))}
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Enlarged Project Details Card */}
+=======
+      {/* Project Details Modal */}
+>>>>>>> eeae61f3ca172fd347692b9ffb5a04972fb6e33d
       {selectedProject && (
         <div className="project-details-card">
           <h3>{selectedProject.name}</h3>
