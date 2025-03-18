@@ -1,6 +1,9 @@
 .projects-container {
-  margin-left: 270px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
+  max-width: 1000px;
+  text-align: center;
 }
 
 h2 {
@@ -11,46 +14,75 @@ h2 {
 .projects-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
+}
+
+.project-category {
+  width: 100%;
 }
 
 .project-category h3 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.project-table {
-  width: 100%;
-  border-collapse: collapse;
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  width: 280px;
   background: white;
-}
-
-.project-table th, .project-table td {
-  padding: 12px;
-  border: 1px solid #ddd;
-  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.project-table tr:hover {
-  background: #f0f0f0;
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.project-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Enlarged Project Details Card */
 .project-details-card {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 20px;
-  width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
 .project-details-card h3 {
+  font-size: 24px;
   margin-top: 0;
+}
+
+.project-details-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .video-container {
@@ -59,18 +91,19 @@ h2 {
 
 .video-container iframe {
   width: 100%;
-  height: 180px;
-  border-radius: 5px;
+  height: 250px;
+  border-radius: 10px;
 }
 
 .close-btn {
-  margin-top: 10px;
-  padding: 8px 12px;
+  margin-top: 15px;
+  padding: 10px 15px;
   border: none;
   background: #d9534f;
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .close-btn:hover {
