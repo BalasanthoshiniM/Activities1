@@ -315,7 +315,7 @@ const Projects = () => {
   const ongoingProjects = [
     { 
       id: 101, 
-      title: "Smart Campus Management System", 
+      title: "Learning Management System", 
       faculty: "Dr. Sarah Wilson",
       members: [
         "SRI ANNAPOORANI S",
@@ -329,7 +329,7 @@ const Projects = () => {
     },
     { 
       id: 102, 
-      title: "AI-Powered Learning Platform", 
+      title: "Student Performance Tracker", 
       faculty: "Prof. Robert Johnson",
       members: [
         "HARSHINI V",
@@ -343,7 +343,7 @@ const Projects = () => {
     },
     { 
       id: 103, 
-      title: "IoT Security Framework", 
+      title: "Alumini Connect", 
       faculty: "Dr. Emily Chen",
       members: [
         "VITHESH T",
@@ -357,7 +357,7 @@ const Projects = () => {
     },
     { 
       id: 104, 
-      title: "Virtual Learning Platform", 
+      title: "Student Hub", 
       faculty: "Dr. Michael Brown",
       members: [
         "ARUNA T",
@@ -371,7 +371,7 @@ const Projects = () => {
     },
     { 
       id: 105, 
-      title: "Smart Agriculture System", 
+      title: "Coding Platform", 
       faculty: "Prof. Lisa Anderson",
       members: [
         "AMBREIN S",
@@ -388,7 +388,7 @@ const Projects = () => {
   const completedProjects = [
     { 
       id: 201, 
-      title: "E-commerce Platform", 
+      title: "Quiz", 
       faculty: "Dr. David Lee",
       members: [
         "LOGESH KUMAR M",
@@ -402,7 +402,7 @@ const Projects = () => {
     },
     { 
       id: 202, 
-      title: "Portfolio Website", 
+      title: "Leave Management System", 
       faculty: "Prof. James Wilson",
       members: [
         "ALEX TURNER",
@@ -416,7 +416,7 @@ const Projects = () => {
     },
     { 
       id: 203, 
-      title: "IoT Security System", 
+      title: "QB To QP Converter", 
       faculty: "Dr. Rachel Chen",
       members: [
         "JOHN DOE",
