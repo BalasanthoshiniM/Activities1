@@ -1,0 +1,754 @@
+/* Main container styles */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px; /* Space for sidebar */
+  width: calc(100vw - 250px);
+  box-sizing: border-box;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: white;
+  color: #343a40;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  color: #343a40;
+  text-decoration: none;
+  display: block;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar-menu a:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+  transform: translateX(5px);
+}
+
+/* Activities styles */
+.activities-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.activities-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.activities-main-title {
+  color: #343a40;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.activities-brief {
+  color: #6c757d;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.activities-image-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.activities-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.activity-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 16/9;
+}
+
+.activity-image:hover {
+  transform: scale(1.05);
+}
+
+.activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Projects styles */
+.projects-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.projects-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.project-category {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-category:hover {
+  transform: translateY(-5px);
+}
+
+.project-category h2 {
+  color: #343a40;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 10px;
+}
+
+.project-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project-card:hover {
+  background: #e9ecef;
+  transform: scale(1.02);
+}
+
+.project-header {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-name {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.faculty-in-charge {
+  background: #e9ecef;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.faculty-label {
+  font-weight: 600;
+  color: #495057;
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+.faculty-name {
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.members-title {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.member {
+  color: #495057;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.project-details-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 500px;
+  max-width: 90%;
+  height: 600px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  text-align: center;
+  z-index: 1000;
+}
+
+.project-details-card button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-details-card button:hover {
+  background-color: #495057;
+}
+
+/* Hackathon styles */
+.hackathon-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hackathon-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.hackathon-main-title {
+  color: #343a40;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hackathon-date {
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.hackathon-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hackathon-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hackathon-section h2 {
+  color: #343a40;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Faculty section styles */
+.faculty-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.faculty-list li {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #495057;
+  transition: transform 0.3s ease;
+}
+
+.faculty-list li:hover {
+  transform: translateY(-5px);
+}
+
+/* Teams section styles */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.team-block {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  min-height: 280px;
+}
+
+.team-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.team-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 45px;
+}
+
+.team-member-name {
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Images section styles */
+.hackathon-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.hackathon-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hackathon-image:hover {
+  transform: scale(1.05);
+}
+
+.hackathon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Internship styles */
+.internship-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.internship-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.internship-main-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.internship-date {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.internship-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.internship-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.internship-section h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+.project-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-name {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.faculty-in-charge {
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.faculty-label {
+  font-weight: 600;
+  color: #495057;
+  margin-right: 8px;
+}
+
+.faculty-name {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.members-title {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.member {
+  color: #495057;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Internship image gallery styles */
+.internship-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.internship-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.internship-image:hover {
+  transform: scale(1.05);
+}
+
+.internship-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  .app-container {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .projects-section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .project-category {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .activities-main-title {
+    font-size: 2.5rem;
+  }
+
+  .activities-brief {
+    font-size: 1.1rem;
+  }
+
+  .activities-image-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .activity-image {
+    aspect-ratio: 16/9;
+  }
+
+  .activities-card,
+  .hackathon-card,
+  .internship-card {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .activities-title,
+  .hackathon-title,
+  .internship-title {
+    font-size: 2rem;
+  }
+
+  .hackathon-main-title {
+    font-size: 2.5rem;
+  }
+
+  .hackathon-date {
+    font-size: 1.1rem;
+  }
+
+  .hackathon-section {
+    padding: 20px;
+  }
+
+  .hackathon-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .faculty-list {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-member-name {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .hackathon-image-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .hackathon-image {
+    aspect-ratio: 16/9;
+  }
+
+  .internship-container {
+    padding: 15px;
+  }
+
+  .internship-main-title {
+    font-size: 2rem;
+  }
+
+  .internship-section {
+    padding: 20px;
+  }
+
+  .project-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  .project-name {
+    font-size: 1.2rem;
+  }
+
+  .member {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .internship-image-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .internship-image {
+    aspect-ratio: 16/9;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .project-card {
+    min-height: 160px;
+    padding: 12px;
+  }
+
+  .project-name {
+    font-size: 1.1rem;
+  }
+
+  .member {
+    font-size: 0.75rem;
+    padding: 3px;
+  }
+} 
