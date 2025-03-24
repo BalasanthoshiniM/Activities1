@@ -66,12 +66,12 @@ const Hackathon = () => {
         teamName: "Tech Innovators",
         project: "AI-Powered Healthcare System",
         members: [
-          "John Doe",
-          "Jane Smith",
-          "Mike Johnson",
-          "Sarah Wilson",
-          "David Brown",
-          "Emma Davis"
+          "SRI ANNAPOORANI S",
+          "SUBASHINI G",
+          "SWATHI TC",
+          "SHREENITHA S",
+          "SOWMIYA N",
+          "SWETHA S"
         ]
       },
       {
@@ -79,12 +79,11 @@ const Hackathon = () => {
         teamName: "Code Warriors",
         project: "Smart City Solutions",
         members: [
-          "Alice Brown",
-          "Bob Wilson",
-          "Carol Davis",
-          "Daniel Lee",
-          "Eva Chen",
-          "Frank Miller"
+          "HARSHINI V",
+          "KARTHIGA S",
+          "JEYASHREE TN",
+          "HARIHARAPRIYA RS"
+          
         ]
       },
       {
@@ -92,12 +91,12 @@ const Hackathon = () => {
         teamName: "Digital Pioneers",
         project: "Blockchain Security",
         members: [
-          "David Lee",
-          "Emma Wilson",
-          "Frank Miller",
-          "Grace Zhang",
-          "Henry Park",
-          "Ivy Chen"
+          "VITHESH T",
+          "VISHAL J",
+          "KARUPPASAMY M",
+          "VISHAAL S",
+          "SANTHOSH KUMAR KSD"
+          
         ]
       },
       {
@@ -105,12 +104,12 @@ const Hackathon = () => {
         teamName: "Future Builders",
         project: "IoT Smart Home",
         members: [
-          "Grace Chen",
-          "Henry Zhang",
-          "Ivy Patel",
-          "Jack Thompson",
-          "Kelly White",
-          "Liam Brown"
+          "ARUNA T",
+          "SHREE VIKHASHINI J",
+          "SUSHMITHA T",
+          "PRIYADHARSHINI M",
+          "RAJADHARSHINI R",
+          "AZHAGU MEENA G"
         ]
       },
       {
@@ -118,12 +117,12 @@ const Hackathon = () => {
         teamName: "Innovation Squad",
         project: "AR Education Platform",
         members: [
-          "Jack Thompson",
-          "Kelly White",
-          "Liam Brown",
-          "Mia Johnson",
-          "Noah Davis",
-          "Olivia Wilson"
+          "AMBREIN S",
+          "BALASANTHOSHINI M",
+          "BAVAKARNI G",
+          "ADHARSHANA MV",
+          "PRIYANKA KP",
+          "SHONAA LR"
         ]
       },
       {
@@ -131,12 +130,12 @@ const Hackathon = () => {
         teamName: "Tech Titans",
         project: "IoT Security System",
         members: [
-          "Alex Turner",
-          "Sophie Chen",
-          "Ryan Park",
-          "Emma Wilson",
-          "James Brown",
-          "Lily Zhang"
+          "LOGESH KUMAR M",
+          "NAGAVISHNU KARTHICK BS",
+          "DEVIS ARUNA DEVI D",
+          "VISHNU PRIYA TK",
+          "JEEVAJOTHI M",
+          "SHANMUGAPRIYAN M"
         ]
       }
     ]
@@ -194,80 +193,77 @@ const Internship = () => {
     projects: [
       {
         id: 1,
-        name: "Smart Campus Management System",
-        faculty: "Dr. Sarah Wilson",
+        name: "Faculty Data Management System",
+        faculty: "PADMA DEVI S",
         members: [
-          "SRI ANNAPOORANI S",
-          "SUBASHINI G",
-          "SWATHI T C",
-          "SHREENITHA S",
-          "SOWMIYA N",
-          "SWETHA S"
+          "HARISH KS",
+          "SIVASAKTHIVEL P",
+          "NAGASURYA TG",
+          "PRANAV MV",
+          "ASWIN KUMAR G"
+          
         ]
       },
       {
         id: 2,
-        name: "AI-Powered Learning Platform",
-        faculty: "Prof. Robert Johnson",
+        name: "Lab Session Management System",
+        faculty: "PADMA DEVI S",
         members: [
-          "HARSHINI V",
-          "KARTHIGA S",
-          "JEYASHREE T N",
-          "HARIHARAPRIYA R S",
-          "KAVIYA S",
-          "KEERTHANA S"
+          "ADITHYA R",
+          "HARI KRISHNAN S",
+          "MITHUN KUMAR SR",
+          "SURYA NAARAAYANAN CV",
+          "THARUN VV"
+          
         ]
       },
       {
         id: 3,
-        name: "IoT Security Framework",
-        faculty: "Dr. Emily Chen",
+        name: "Student Data Management System",
+        faculty: "SHANTHALAKSHMI REVATHY J",
         members: [
-          "VITHESH T",
-          "VISHAL J",
-          "KARUPPASAMY M",
-          "VISHAAL S",
-          "SANTHOSH KUMAR K S D",
-          "SELVAMANI K"
+          "MADHAVA K",
+          "HARSHA VARTHANAN S",
+          "RITIKA SACHDEVA M",
+          "MANASADEVI TG",
+          "MATCHARANI J"
+         
         ]
       },
       {
         id: 4,
-        name: "Virtual Learning Platform",
-        faculty: "Dr. Michael Brown",
+        name: "Internal Event Management System",
+        faculty: "SHANTHALAKSHMI REVATHY J",
         members: [
-          "ARUNA T",
-          "SHREE VIKHASHINI J",
-          "SUSHMITHA T",
-          "PRIYADHARSHINI R",
-          "RAJADHARSHINI R",
-          "AZHAGU MEENA G"
+          "ALEX PANDIYAN M",
+          "ARUN KUMAR K",
+          "DAVID DHINAKARAN J",
+          "HARISH V",
+          "SURYA PRAKASH M"
+          
         ]
       },
       {
         id: 5,
-        name: "Smart Agriculture System",
-        faculty: "Prof. Lisa Anderson",
+        name: "Leave Approval System",
+        faculty: "Dr.A.M.RAJESWARI",
         members: [
-          "AMBREIN S",
-          "BALASANTHOSHINI M",
-          "BAVAKARNI G",
-          "SHONAA L R",
-          "PRIYANKA K P",
-          "ADHARSHANA M V"
+          "DINESH KUMAR KK",
+          "UDHAYA CHANDRA",
+          "PANDIAN S",
+          "VINOTH KUMAR KB"
+          
         ]
       },
       {
         id: 6,
-        name: "IoT Security System",
-        faculty: "Dr. David Lee",
+        name: "Defaulter Tracking System",
+        faculty: "Mrs.SAHEBZATHI",
         members: [
-          "LOGESH KUMAR M",
-          "NAGAVISHNU KARTHICK B S",
-          "DEVIS ARUNA DEVI D",
-          "VISHNU PRIYA T K",
-          "JEEVAJOTHI M",
-          "SHANMUGAPIRIYAN M"
+          "ABITHA SRI G",
+          "MUTHIESWARI S",
+          "SANJANA R"
+          
         ]
       }
     ]
