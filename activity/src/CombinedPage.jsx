@@ -194,9 +194,17 @@ const Hackathon = () => {
 // Internship Component
 const Internship = () => {
   const internshipData = {
-    teams: [
+    title: "In-House Internship",
+    images: [
+      "/internship1.jpg",
+      "/internship2.jpg",
+      "/internship3.jpg"
+    ],
+    projects: [
       {
         id: 1,
+        name: "Smart Campus Management System",
+        faculty: "Dr. Sarah Wilson",
         members: [
           "SRI ANNAPOORANI S",
           "SUBASHINI G",
@@ -208,6 +216,8 @@ const Internship = () => {
       },
       {
         id: 2,
+        name: "AI-Powered Learning Platform",
+        faculty: "Prof. Robert Johnson",
         members: [
           "HARSHINI V",
           "KARTHIGA S",
@@ -219,6 +229,8 @@ const Internship = () => {
       },
       {
         id: 3,
+        name: "IoT Security Framework",
+        faculty: "Dr. Emily Chen",
         members: [
           "VITHESH T",
           "VISHAL J",
@@ -230,6 +242,8 @@ const Internship = () => {
       },
       {
         id: 4,
+        name: "Virtual Learning Platform",
+        faculty: "Dr. Michael Brown",
         members: [
           "ARUNA T",
           "SHREE VIKHASHINI J",
@@ -241,6 +255,8 @@ const Internship = () => {
       },
       {
         id: 5,
+        name: "Smart Agriculture System",
+        faculty: "Prof. Lisa Anderson",
         members: [
           "AMBREIN S",
           "BALASANTHOSHINI M",
@@ -252,6 +268,8 @@ const Internship = () => {
       },
       {
         id: 6,
+        name: "IoT Security System",
+        faculty: "Dr. David Lee",
         members: [
           "LOGESH KUMAR M",
           "NAGAVISHNU KARTHICK B S",
@@ -266,13 +284,34 @@ const Internship = () => {
 
   return (
     <div className="internship-container">
-      <div className="teams-grid">
-        {internshipData.teams.map((team) => (
-          <div key={team.id} className="team-block">
-            <div className="team-number">#{team.id}</div>
-            <div className="team-members-list">
-              {team.members.map((member, index) => (
-                <div key={index} className="team-member-name">{member}</div>
+      <div className="internship-header">
+        <h1 className="internship-main-title">{internshipData.title}</h1>
+      </div>
+
+      <div className="internship-section images-section">
+        <div className="internship-image-grid">
+          {internshipData.images.map((image, index) => (
+            <div key={index} className="internship-image">
+              <img src={image} alt={`Internship ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="projects-grid">
+        {internshipData.projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <div className="project-header">
+              <h3 className="project-name">{project.name}</h3>
+              <div className="faculty-in-charge">
+                <span className="faculty-label">Faculty Mentor:</span>
+                <span className="faculty-name">{project.faculty}</span>
+              </div>
+            </div>
+            <div className="team-members">
+              <h4 className="members-title">Team Members</h4>
+              {project.members.map((member, index) => (
+                <span key={index} className="member">{member}</span>
               ))}
             </div>
           </div>
