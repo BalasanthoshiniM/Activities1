@@ -21,26 +21,29 @@ const Sidebar = () => {
 
 // Activities Component
 const Activities = () => {
+  const activitiesData = {
+    title: "Activities",
+    brief: "Explore our exciting activities and events! 🎉",
+    images: [
+      "/activity1.jpg",
+      "/activity2.jpg",
+      "/activity3.jpg"
+    ]
+  };
+
   return (
     <div className="activities-container">
       <div className="activities-header">
-        <h1 className="activities-main-title">Activities</h1>
-        <p className="activities-brief">
-          Discover a world of opportunities through our diverse range of activities. 
-          From hands-on projects to professional development, we offer something for everyone.
-        </p>
+        <h1 className="activities-main-title">{activitiesData.title}</h1>
+        <p className="activities-brief">{activitiesData.brief}</p>
       </div>
       <div className="activities-image-section">
         <div className="activities-image-grid">
-          <div className="activity-image">
-            <img src="/activity1.jpg" alt="Activity 1" />
-          </div>
-          <div className="activity-image">
-            <img src="/activity2.jpg" alt="Activity 2" />
-          </div>
-          <div className="activity-image">
-            <img src="/activity3.jpg" alt="Activity 3" />
-          </div>
+          {activitiesData.images.map((image, index) => (
+            <div key={index} className="activity-image">
+              <img src={image} alt={`Activity ${index + 1}`} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -50,138 +53,126 @@ const Activities = () => {
 // Hackathon Component
 const Hackathon = () => {
   const hackathonData = {
-    title: "Hackathon 2025",
-    date: "January 13,2025",
-    facultyIncharges: [
-      "Dr. Sarah Johnson - Computer Science",
-      "Prof. Michael Chen - Information Technology",
-      "Dr. Emily Brown - Electronics"
-    ],
-    topTeams: [
-      {
-        rank: 1,
-        name: "Tech Innovators",
-        project: "AI-Powered Healthcare Assistant",
-        members: [
-          "SRI ANNAPOORANI S",
-          "SUBASHINI G",
-          "SWATHI T C",
-          "SHREENITHA S",
-          "SOWMIYA N",
-          "SWETHA S"
-        ]
-      },
-      {
-        rank: 2,
-        name: "Code Warriors",
-        project: "Smart City Solutions",
-        members: [
-          "HARSHINI V",
-          "KARTHIGA S",
-          "JEYASHREE T N",
-          "HARIHARAPRIYA R S",
-          
-        ]
-      },
-      {
-        rank: 3,
-        name: "Digital Pioneers",
-        project: "Sustainable Energy Monitor",
-        members: [
-          "VITHESH T",
-          "VISHAL J",
-          "KARUPPASAMY M",
-          "VISHAAL S",
-          "SANTHOSH KUMAR K S D"
-         
-        ]
-      },
-      {
-        rank: 4,
-        name: "Future Builders",
-        project: "Virtual Learning Platform",
-        members: [
-          "ARUNA T",
-          "SHREE VIKHASHINI J",
-          "SUSHMITHA T",
-          "PRIYADHARSHINI R",
-          "RAJADHARSHINI R",
-          "AZHAGU MEENA G"
-        ]
-      },
-      {
-        rank: 5,
-        name: "Innovation Squad",
-        project: "Smart Agriculture System",
-        members: [
-          "AMBREIN S",
-          "BALASANTHOSHINI M",
-          "BAVAKARNI G",
-          "SHONAA L R",
-          "PRIYANKA K P",
-          "ADHARSHANA M V"
-        ]
-      },
-      {
-        rank: 6,
-        name: "Tech Titans",
-        project: "IoT Security System",
-        members: [
-          "LOGESH KUMAR M",
-          "NAGAVISHNU KARTHICK B S",
-          "DEVIS ARUNA DEVI D",
-          "VISHNU PRIYA T K",
-          "JEEVAJOTHI M",
-          "SHANMUGAPIRIYAN M"
-        ]
-      }
-    ],
+    title: "Hackathon 2024",
+    date: "March 15-17, 2024",
     images: [
       "/hackathon1.jpg",
       "/hackathon2.jpg",
       "/hackathon3.jpg"
+    ],
+    topTeams: [
+      {
+        rank: 1,
+        teamName: "Tech Innovators",
+        project: "AI-Powered Healthcare System",
+        members: [
+          "John Doe",
+          "Jane Smith",
+          "Mike Johnson",
+          "Sarah Wilson",
+          "David Brown",
+          "Emma Davis"
+        ]
+      },
+      {
+        rank: 2,
+        teamName: "Code Warriors",
+        project: "Smart City Solutions",
+        members: [
+          "Alice Brown",
+          "Bob Wilson",
+          "Carol Davis",
+          "Daniel Lee",
+          "Eva Chen",
+          "Frank Miller"
+        ]
+      },
+      {
+        rank: 3,
+        teamName: "Digital Pioneers",
+        project: "Blockchain Security",
+        members: [
+          "David Lee",
+          "Emma Wilson",
+          "Frank Miller",
+          "Grace Zhang",
+          "Henry Park",
+          "Ivy Chen"
+        ]
+      },
+      {
+        rank: 4,
+        teamName: "Future Builders",
+        project: "IoT Smart Home",
+        members: [
+          "Grace Chen",
+          "Henry Zhang",
+          "Ivy Patel",
+          "Jack Thompson",
+          "Kelly White",
+          "Liam Brown"
+        ]
+      },
+      {
+        rank: 5,
+        teamName: "Innovation Squad",
+        project: "AR Education Platform",
+        members: [
+          "Jack Thompson",
+          "Kelly White",
+          "Liam Brown",
+          "Mia Johnson",
+          "Noah Davis",
+          "Olivia Wilson"
+        ]
+      },
+      {
+        rank: 6,
+        teamName: "Tech Titans",
+        project: "IoT Security System",
+        members: [
+          "Alex Turner",
+          "Sophie Chen",
+          "Ryan Park",
+          "Emma Wilson",
+          "James Brown",
+          "Lily Zhang"
+        ]
+      }
     ]
   };
 
   return (
     <div className="hackathon-container">
       <div className="hackathon-header">
-        <h1 className="hackathon-main-title">{hackathonData.title}</h1>
-        <p className="hackathon-date">Held on: {hackathonData.date}</p>
+        <h1 className="hackathon-main-title">{hackathonData.title} 🏆</h1>
+        <p className="hackathon-date">{hackathonData.date}</p>
       </div>
 
       <div className="hackathon-content">
-        <div className="hackathon-section faculty-section">
-          <h2>Faculty Incharges</h2>
-          <ul className="faculty-list">
-            {hackathonData.facultyIncharges.map((faculty, index) => (
-              <li key={index}>{faculty}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="hackathon-section teams-section">
-          <h2>Heartiest Congratulations To the Winning Teams</h2>
-          <div className="teams-grid">
-            {hackathonData.topTeams.map((team) => (
-              <div key={team.rank} className="team-card">
-                <div className="team-rank">#{team.rank}</div>
-                <div className="team-members">
-                  {team.members.map((member, index) => (
-                    <span key={index} className="member">{member}</span>
-                  ))}
-                </div>
+        <div className="hackathon-section">
+          <h2>Event Gallery 📸</h2>
+          <div className="hackathon-image-grid">
+            {hackathonData.images.map((image, index) => (
+              <div key={index} className="hackathon-image">
+                <img src={image} alt={`Hackathon ${index + 1}`} />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="hackathon-section images-section">
-          <h2>Event Gallery</h2>
-          <div className="hackathon-image-grid">
-            {hackathonData.images.map((image, index) => (
-              <div key={index} className="hackathon-image">
-                <img src={image} alt={`Hackathon ${index + 1}`} />
+        <div className="hackathon-section">
+          <h2>Top Teams 🏅</h2>
+          <div className="teams-grid">
+            {hackathonData.topTeams.map((team) => (
+              <div key={team.rank} className="team-card">
+                <div className="team-rank">#{team.rank}</div>
+                <div className="team-members">
+                  <h4>Team Members</h4>
+                  {team.members.map((member, index) => (
+                    <span key={index} className="member">{member}</span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -447,7 +438,7 @@ const Projects = () => {
     <div className="projects-container">
       <div className="projects-section">
         <div className="project-category">
-          <h2>Ongoing Projects</h2>
+          <h2>Ongoing Projects 🚀</h2>
           <div className="project-list">
             {ongoingProjects.map((project) => (
               <div
@@ -461,7 +452,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="project-category">
-          <h2>Completed Projects</h2>
+          <h2>Completed Projects 🎯</h2>
           <div className="project-list">
             {completedProjects.map((project) => (
               <div

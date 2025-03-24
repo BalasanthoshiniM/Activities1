@@ -191,6 +191,161 @@
   padding: 10px;
 }
 
+/* Project card styles for Projects component */
+.projects-container .project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects-container .project-card:hover {
+  transform: translateY(-3px);
+}
+
+.projects-container .project-card h3 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Keep internship project cards unchanged */
+.internship-container .project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.internship-container .project-card:hover {
+  transform: translateY(-5px);
+}
+
+.internship-container .project-header {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.internship-container .project-name {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.internship-container .faculty-in-charge {
+  background: #e9ecef;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.internship-container .faculty-label {
+  font-weight: 600;
+  color: #495057;
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+.internship-container .faculty-name {
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.internship-container .members-title {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.internship-container .team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.internship-container .member {
+  color: #495057;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* Projects styles */
+.projects-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.projects-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.project-category {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-category:hover {
+  transform: translateY(-5px);
+}
+
+.project-category h2 {
+  color: #343a40;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 10px;
+}
+
 .project-card {
   background: #f8f9fa;
   padding: 15px;
@@ -207,7 +362,7 @@
   background: #e9ecef;
   transform: scale(1.02);
 }
-
+  
 .project-header {
   margin-bottom: 10px;
   text-align: center;
@@ -899,5 +1054,78 @@
 
   .demo-video {
     max-height: 300px;
+  }
+}
+
+/* Team card styles for Hackathon component */
+.team-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-rank {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.team-members {
+  margin-top: 20px;
+}
+
+.team-members h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.team-members .member {
+  display: block;
+  color: #495057;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.team-members .member:hover {
+  background: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    padding: 20px;
+    min-height: 200px;
+  }
+
+  .team-members h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .team-members .member {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 } 
