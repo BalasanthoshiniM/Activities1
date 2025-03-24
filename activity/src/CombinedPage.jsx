@@ -326,13 +326,121 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const ongoingProjects = [
-    { id: 1, title: "Web Development", description: "Building a responsive website" },
-    { id: 2, title: "Mobile App", description: "Developing an iOS application" },
+    { 
+      id: 101, 
+      title: "Smart Campus Management System", 
+      faculty: "Dr. Sarah Wilson",
+      members: [
+        "SRI ANNAPOORANI S",
+        "SUBASHINI G",
+        "SWATHI T C",
+        "SHREENITHA S",
+        "SOWMIYA N",
+        "SWETHA S"
+      ],
+      demoVideo: "/demo1.mp4"
+    },
+    { 
+      id: 102, 
+      title: "AI-Powered Learning Platform", 
+      faculty: "Prof. Robert Johnson",
+      members: [
+        "HARSHINI V",
+        "KARTHIGA S",
+        "JEYASHREE T N",
+        "HARIHARAPRIYA R S",
+        "KAVIYA S",
+        "KEERTHANA S"
+      ],
+      demoVideo: "/demo2.mp4"
+    },
+    { 
+      id: 103, 
+      title: "IoT Security Framework", 
+      faculty: "Dr. Emily Chen",
+      members: [
+        "VITHESH T",
+        "VISHAL J",
+        "KARUPPASAMY M",
+        "VISHAAL S",
+        "SANTHOSH KUMAR K S D",
+        "SELVAMANI K"
+      ],
+      demoVideo: "/demo3.mp4"
+    },
+    { 
+      id: 104, 
+      title: "Virtual Learning Platform", 
+      faculty: "Dr. Michael Brown",
+      members: [
+        "ARUNA T",
+        "SHREE VIKHASHINI J",
+        "SUSHMITHA T",
+        "PRIYADHARSHINI R",
+        "RAJADHARSHINI R",
+        "AZHAGU MEENA G"
+      ],
+      demoVideo: "/demo4.mp4"
+    },
+    { 
+      id: 105, 
+      title: "Smart Agriculture System", 
+      faculty: "Prof. Lisa Anderson",
+      members: [
+        "AMBREIN S",
+        "BALASANTHOSHINI M",
+        "BAVAKARNI G",
+        "SHONAA L R",
+        "PRIYANKA K P",
+        "ADHARSHANA M V"
+      ],
+      demoVideo: "/demo5.mp4"
+    }
   ];
 
   const completedProjects = [
-    { id: 3, title: "E-commerce Platform", description: "Completed online store" },
-    { id: 4, title: "Portfolio Website", description: "Personal portfolio project" },
+    { 
+      id: 201, 
+      title: "E-commerce Platform", 
+      faculty: "Dr. David Lee",
+      members: [
+        "LOGESH KUMAR M",
+        "NAGAVISHNU KARTHICK B S",
+        "DEVIS ARUNA DEVI D",
+        "VISHNU PRIYA T K",
+        "JEEVAJOTHI M",
+        "SHANMUGAPIRIYAN M"
+      ],
+      demoVideo: "/demo6.mp4"
+    },
+    { 
+      id: 202, 
+      title: "Portfolio Website", 
+      faculty: "Prof. James Wilson",
+      members: [
+        "ALEX TURNER",
+        "SOPHIE CHEN",
+        "RYAN PARK",
+        "EMMA WILSON",
+        "JAMES BROWN",
+        "LILY ZHANG"
+      ],
+      demoVideo: "/demo7.mp4"
+    },
+    { 
+      id: 203, 
+      title: "IoT Security System", 
+      faculty: "Dr. Rachel Chen",
+      members: [
+        "JOHN DOE",
+        "JANE SMITH",
+        "MIKE JOHNSON",
+        "SARAH WILSON",
+        "DAVID BROWN",
+        "EMMA DAVIS"
+      ],
+      demoVideo: "/demo8.mp4"
+    }
   ];
 
   return (
@@ -348,7 +456,6 @@ const Projects = () => {
                 onClick={() => setSelectedProject(project)}
               >
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
               </div>
             ))}
           </div>
@@ -363,7 +470,6 @@ const Projects = () => {
                 onClick={() => setSelectedProject(project)}
               >
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
               </div>
             ))}
           </div>
@@ -371,10 +477,32 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <div className="project-details-card">
-          <h2>{selectedProject.title}</h2>
-          <p>{selectedProject.description}</p>
-          <button onClick={() => setSelectedProject(null)}>Close</button>
+        <div className="project-details-overlay">
+          <div className="project-details-card">
+            <button className="close-button" onClick={() => setSelectedProject(null)}>×</button>
+            <h2>{selectedProject.title}</h2>
+            <div className="project-details-content">
+              <div className="project-faculty">
+                <h3>Faculty Mentor</h3>
+                <p>{selectedProject.faculty}</p>
+              </div>
+              <div className="project-members">
+                <h3>Team Members</h3>
+                <div className="members-grid">
+                  {selectedProject.members.map((member, index) => (
+                    <span key={index} className="member">{member}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="project-demo">
+                <h3>Demo Video</h3>
+                <video controls className="demo-video">
+                  <source src={selectedProject.demoVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
