@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
 import "./CombinedStyles.css";
+import act1 from "./assets/act1.jpg";
+import act2 from "./assets/act2.jpg";
+import act3 from "./assets/act3.jpg";
 
 // Sidebar Component
 const Sidebar = () => {
@@ -24,11 +27,7 @@ const Activities = () => {
   const activitiesData = {
     title: "Activities",
     brief: "Explore our exciting activities and events! 🎉",
-    images: [
-      "/act1.jpg",
-      "/activity2.jpg",
-      "/activity3.jpg"
-    ]
+    images: [act1, act2, act3]
   };
 
   return (
@@ -39,11 +38,15 @@ const Activities = () => {
       </div>
       <div className="activities-image-section">
         <div className="activities-image-grid">
-          {activitiesData.images.map((image, index) => (
-            <div key={index} className="activity-image">
-              <img src={image} alt={`Activity ${index + 1}`} />
-            </div>
-          ))}
+          <div className="activity-image">
+            <img src={act1} alt="Activity 1" />
+          </div>
+          <div className="activity-image">
+            <img src={act2} alt="Activity 2" />
+          </div>
+          <div className="activity-image">
+            <img src={act3} alt="Activity 3" />
+          </div>
         </div>
       </div>
     </div>
