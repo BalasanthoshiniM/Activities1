@@ -4,13 +4,14 @@ import "./CombinedStyles.css";
 import act1 from "./assets/act1.jpg";
 import act2 from "./assets/act2.jpg";
 import act3 from "./assets/act3.jpg";
+import logo from "./assets/logo.png";
 
 // Sidebar Component
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-logo">
-        <img src="/logo.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
       <ul className="sidebar-menu">
         <li><Link to="/activities">Activities</Link></li>
