@@ -25,7 +25,7 @@ const Activities = () => {
     title: "Activities",
     brief: "Explore our exciting activities and events! 🎉",
     images: [
-      "/activity/src/assets/act1.jpg",
+      "/act1.jpg",
       "/activity2.jpg",
       "/activity3.jpg"
     ]
