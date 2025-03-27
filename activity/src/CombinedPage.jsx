@@ -27,7 +27,7 @@ const Sidebar = () => {
 const Activities = () => {
   const activitiesData = {
     title: "Activities",
-    brief: "Explore our exciting activities and events! 🎉",
+    brief: "Explore our exciting activities and events! <span class=\"emoji\">🎉</span>",
     images: [act1, act2, act3]
   };
 
@@ -35,7 +35,7 @@ const Activities = () => {
     <div className="activities-container">
       <div className="activities-header">
         <h1 className="activities-main-title">{activitiesData.title}</h1>
-        <p className="activities-brief">{activitiesData.brief}</p>
+        <p className="activities-brief" dangerouslySetInnerHTML={{__html: activitiesData.brief}}></p>
       </div>
       <div className="activities-image-section">
         <div className="activities-image-grid">
@@ -57,7 +57,7 @@ const Activities = () => {
 // Hackathon Component
 const Hackathon = () => {
   const hackathonData = {
-    title: "Hackathon 2024",
+    title: "Hackathon 2024 <span class=\"emoji\">🏆</span>",
     date: "March 15-17, 2024",
     images: [
       "/hackathon1.jpg",
@@ -148,13 +148,13 @@ const Hackathon = () => {
   return (
     <div className="hackathon-container">
       <div className="hackathon-header">
-        <h1 className="hackathon-main-title">{hackathonData.title} 🏆</h1>
+        <h1 className="hackathon-main-title" dangerouslySetInnerHTML={{__html: hackathonData.title}}></h1>
         <p className="hackathon-date">{hackathonData.date}</p>
       </div>
 
       <div className="hackathon-content">
         <div className="hackathon-section">
-          <h2>Event Gallery 📸</h2>
+          <h2>Event Gallery <span className="emoji">📸</span></h2>
           <div className="hackathon-image-grid">
             {hackathonData.images.map((image, index) => (
               <div key={index} className="hackathon-image">
@@ -165,7 +165,7 @@ const Hackathon = () => {
         </div>
 
         <div className="hackathon-section">
-          <h2>Top Teams 🏅</h2>
+          <h2>Top Teams <span className="emoji">🏅</span></h2>
           <div className="teams-grid">
             {hackathonData.topTeams.map((team) => (
               <div key={team.rank} className="team-card">
@@ -188,7 +188,7 @@ const Hackathon = () => {
 // Internship Component
 const Internship = () => {
   const internshipData = {
-    title: "In-House Internship",
+    title: "In-House Internship <span class=\"emoji\">💼</span>",
     images: [
       "/internship1.jpg",
       "/internship2.jpg",
@@ -276,7 +276,7 @@ const Internship = () => {
   return (
     <div className="internship-container">
       <div className="internship-header">
-        <h1 className="internship-main-title">{internshipData.title}</h1>
+        <h1 className="internship-main-title" dangerouslySetInnerHTML={{__html: internshipData.title}}></h1>
       </div>
 
       <div className="internship-section images-section">
@@ -434,13 +434,20 @@ const Projects = () => {
     }
   ];
 
+  const projectsData = {
+    ongoingTitle: "Ongoing Projects <span class=\"emoji\">🚀</span>",
+    completedTitle: "Completed Projects <span class=\"emoji\">🎯</span>",
+    ongoingProjects: ongoingProjects,
+    completedProjects: completedProjects
+  };
+
   return (
     <div className="projects-container">
       <div className="projects-section">
         <div className="project-category">
-          <h2>Ongoing Projects 🚀</h2>
+          <h2 dangerouslySetInnerHTML={{__html: projectsData.ongoingTitle}}></h2>
           <div className="project-list">
-            {ongoingProjects.map((project) => (
+            {projectsData.ongoingProjects.map((project) => (
               <div
                 key={project.id}
                 className="project-card"
@@ -452,9 +459,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="project-category">
-          <h2>Completed Projects 🎯</h2>
+          <h2 dangerouslySetInnerHTML={{__html: projectsData.completedTitle}}></h2>
           <div className="project-list">
-            {completedProjects.map((project) => (
+            {projectsData.completedProjects.map((project) => (
               <div
                 key={project.id}
                 className="project-card"

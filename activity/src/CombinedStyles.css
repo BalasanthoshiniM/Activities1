@@ -1,5 +1,16 @@
 /* Base styles */
 :root {
+  --purple-primary: #8A2BE2;
+  --purple-secondary: #9370DB;
+  --purple-accent: #B57EDC;
+  --purple-light: #E6E6FA;
+  --blue-accent: #4169E1;
+  --pink-accent: #FF69B4;
+  --teal-accent: #00CED1;
+  --green-accent: #32CD32;
+  --text-dark: #1a1a1a;
+  --text-light: #666666;
+  --white: #ffffff;
   --text-primary: #2c3e50;
   --text-secondary: #495057;
   --bg-primary: #ffffff;
@@ -24,8 +35,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background: linear-gradient(135deg, #f0e6ff 0%, #ffffff 50%, #e6f0ff 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  animation: gradientShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Main container styles */
@@ -35,6 +55,7 @@ body {
   background-color: #f8f9fa;
   width: 100vw;
   overflow-x: hidden;
+  background: transparent;
 }
 
 .main-content {
@@ -48,16 +69,16 @@ body {
 /* Sidebar styles */
 .sidebar {
   width: 250px;
-  background-color: var(--bg-secondary);
+  background: linear-gradient(180deg, #ffffff 0%, #f0e6ff 100%);
   color: #343a40;
   padding: 20px;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 20px rgba(138, 43, 226, 0.15);
   z-index: 1000;
-  border-right: 1px solid var(--border-color);
+  border-right: 2px solid rgba(138, 43, 226, 0.2);
 }
 
 .sidebar-logo {
@@ -73,7 +94,8 @@ body {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+  border: 3px solid var(--purple-primary);
   transition: transform 0.3s ease;
 }
 
@@ -92,20 +114,24 @@ body {
 }
 
 .sidebar-menu a {
-  color: var(--text-primary);
+  color: var(--purple-primary);
   text-decoration: none;
   display: block;
   padding: 12px 15px;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-size: 16px;
   font-weight: 500;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f5ff 100%);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-menu a:hover {
-  background-color: #f8f9fa;
-  color: var(--accent-color);
-  transform: translateX(5px);
+  color: white;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-secondary) 100%);
+  transform: translateX(8px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
 }
 
 /* Activities styles */
@@ -128,14 +154,19 @@ body {
 }
 
 .activities-main-title {
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--blue-accent) 50%, var(--purple-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 15px rgba(138, 43, 226, 0.1);
+  letter-spacing: 1px;
 }
 
 .activities-brief {
-  color: var(--text-secondary);
+  color: var(--text-light);
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -159,14 +190,15 @@ body {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   aspect-ratio: 16/9;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  background: var(--white);
+  border: 1px solid rgba(138, 43, 226, 0.1);
 }
 
 .activity-image:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.1);
 }
 
 .activity-image img {
@@ -389,21 +421,23 @@ body {
 }
 
 .project-card {
-  background-color: var(--bg-secondary);
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
   padding: 15px;
   border-radius: 8px;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.1);
 }
 
 .project-card:hover {
-  background: #e9ecef;
-  transform: scale(1.02);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
+  border-color: var(--purple-primary);
 }
   
 .project-header {
@@ -412,7 +446,7 @@ body {
 }
 
 .project-name {
-  color: var(--text-primary);
+  color: var(--purple-primary);
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
@@ -450,15 +484,50 @@ body {
   gap: 4px;
 }
 
+/* Member styles - without hover effects */
 .member {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
+  background: #f0e6ff;
+  color: var(--text-dark);
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 4px;
-  background: var(--bg-primary);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  text-align: left;
+}
+
+/* Remove all hover effects for members */
+.member:hover,
+.team-members .member:hover,
+.team-members .member:nth-child(5n+1):hover,
+.team-members .member:nth-child(5n+2):hover,
+.team-members .member:nth-child(5n+3):hover,
+.team-members .member:nth-child(5n+4):hover,
+.team-members .member:nth-child(5n+5):hover {
+  transform: none;
+  background: #f0e6ff;
+  color: var(--text-dark);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Special case for internship container */
+.internship-container .member {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.internship-container .member:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+/* Remove pseudo-element */
+.member::before {
+  display: none;
 }
 
 .project-details-card {
@@ -466,7 +535,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--bg-primary);
+  background: var(--white);
   width: 500px;
   max-width: 90%;
   height: 600px;
@@ -476,21 +545,22 @@ body {
   overflow-y: auto;
   text-align: center;
   z-index: 1000;
+  border: 1px solid rgba(138, 43, 226, 0.1);
 }
 
 .project-details-card button {
   margin-top: 20px;
   padding: 10px 25px;
-  background-color: #343a40;
-  color: white;
+  background: linear-gradient(135deg, #8A2BE2 0%, #9370DB 100%);
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-details-card button:hover {
-  background-color: #495057;
+  background: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);
 }
 
 /* Hackathon styles */
@@ -513,14 +583,19 @@ body {
 }
 
 .hackathon-main-title {
-  color: var(--text-primary);
+  color: var(--text-dark);
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--blue-accent) 50%, var(--purple-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 15px rgba(138, 43, 226, 0.1);
+  letter-spacing: 1px;
 }
 
 .hackathon-date {
-  color: var(--text-secondary);
+  color: var(--purple-primary);
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -630,13 +705,32 @@ body {
   border-radius: 10px;
   aspect-ratio: 4/3;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: var(--white);
+  border: 2px solid transparent;
+}
+
+.hackathon-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(65, 105, 225, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.hackathon-image:hover::before {
+  opacity: 1;
 }
 
 .hackathon-image:hover {
-  transform: scale(1.05);
+  transform: translateY(-15px) scale(1.03);
+  border-color: var(--purple-primary);
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.2);
 }
 
 .hackathon-image img {
@@ -644,6 +738,11 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.hackathon-image:hover img {
+  transform: scale(1.1);
 }
 
 /* Internship styles */
@@ -662,6 +761,9 @@ body {
   font-size: 2.5rem;
   color: #2c3e50;
   margin-bottom: 10px;
+  background: linear-gradient(135deg, #8A2BE2 0%, #9370DB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .internship-date {
@@ -697,7 +799,7 @@ body {
 }
 
 .project-card {
-  background: #f8f9fa;
+  background: #ffffff;
   padding: 25px;
   border-radius: 10px;
   position: relative;
@@ -706,10 +808,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.1);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  border-color: #8A2BE2;
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.2);
 }
 
 .project-header {
@@ -718,7 +824,7 @@ body {
 }
 
 .project-name {
-  color: #2c3e50;
+  color: var(--purple-primary);
   font-size: 1.4rem;
   margin-bottom: 15px;
 }
@@ -755,14 +861,35 @@ body {
 }
 
 .member {
-  color: #495057;
-  font-size: 0.85rem;
+  background: #f0e6ff;
+  color: var(--text-dark);
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 6px;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: left;
+}
+
+.member::before {
+  display: none;
+}
+
+.member:hover,
+.team-members .member:hover,
+.team-members .member:nth-child(5n+1):hover,
+.team-members .member:nth-child(5n+2):hover,
+.team-members .member:nth-child(5n+3):hover,
+.team-members .member:nth-child(5n+4):hover,
+.team-members .member:nth-child(5n+5):hover {
+  transform: none;
+  background: #f0e6ff;
+  color: var(--text-dark);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Internship image gallery styles */
@@ -779,13 +906,14 @@ body {
   border-radius: 10px;
   aspect-ratio: 4/3;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--white);
+  border: 1px solid rgba(138, 43, 226, 0.1);
 }
 
 .internship-image:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.1);
 }
 
 .internship-image img {
@@ -975,7 +1103,7 @@ body {
 }
 
 .project-details-card {
-  background-color: var(--bg-primary);
+  background: var(--white);
   border-radius: 15px;
   padding: 30px;
   max-width: 800px;
@@ -988,6 +1116,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: var(--text-primary);
+  border: 1px solid rgba(138, 43, 226, 0.1);
 }
 
 .close-button {
@@ -1009,7 +1138,7 @@ body {
 }
 
 .close-button:hover {
-  color: var(--accent-color);
+  color: var(--purple-primary);
 }
 
 .project-details-card h2 {
@@ -1112,29 +1241,32 @@ body {
 
 /* Team card styles for Hackathon component */
 .team-card {
-  background-color: var(--bg-secondary);
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   min-height: 250px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.1);
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
+  border-color: var(--purple-primary);
 }
 
 .team-rank {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: var(--accent-color);
-  color: white;
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-secondary) 100%);
+  color: #ffffff;
   padding: 5px 15px;
   border-radius: 20px;
   font-weight: 600;
@@ -1154,17 +1286,20 @@ body {
 
 .team-members .member {
   display: block;
-  color: var(--text-secondary);
+  background: #f0e6ff;
+  color: var(--text-dark);
   font-size: 0.9rem;
   padding: 8px 12px;
-  background: var(--bg-primary);
   border-radius: 6px;
   margin-bottom: 8px;
-  transition: background-color 0.3s ease;
+  border: 1px solid rgba(138, 43, 226, 0.15);
 }
 
 .team-members .member:hover {
-  background: #e9ecef;
+  transform: none;
+  background: #f0e6ff;
+  color: var(--text-dark);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -1182,4 +1317,149 @@ body {
     font-size: 0.85rem;
     padding: 6px 10px;
   }
+}
+
+/* Add gradient text effect for LMS */
+.lms-title {
+  background: linear-gradient(135deg, #8A2BE2 0%, #9370DB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Button styles */
+button {
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-secondary) 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);
+  background: linear-gradient(135deg, var(--purple-secondary) 0%, var(--purple-primary) 100%);
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+/* Link styles */
+a {
+  color: var(--purple-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--purple-secondary);
+}
+
+/* Image container styles */
+.activity-image, .hackathon-image, .internship-image {
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.activity-image::before, .hackathon-image::before, .internship-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(65, 105, 225, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.activity-image:hover::before, .hackathon-image:hover::before, .internship-image:hover::before {
+  opacity: 1;
+}
+
+.activity-image:hover, .hackathon-image:hover, .internship-image:hover {
+  transform: translateY(-15px) scale(1.03);
+  border-color: var(--purple-primary);
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.2);
+}
+
+.activity-image img, .hackathon-image img, .internship-image img {
+  transition: transform 0.5s ease;
+}
+
+.activity-image:hover img, .hackathon-image:hover img, .internship-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Section titles */
+h2 {
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple-primary), var(--purple-secondary));
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* Emoji styles - ensure native colors */
+.emoji {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  text-fill-color: initial !important;
+  color: initial !important;
+}
+
+/* Project titles and headers with emojis */
+h1 span.emoji, 
+h2 span.emoji, 
+h3 span.emoji,
+p span.emoji,
+.activities-main-title span.emoji,
+.hackathon-main-title span.emoji,
+.internship-main-title span.emoji {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  text-fill-color: initial !important;
+  color: initial !important;
+  font-weight: normal;
+  display: inline-block;
 } 
